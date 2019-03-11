@@ -15,6 +15,8 @@
  *
  */
 
+#if 0
+
 #include "f469_sd.h"
 #include "mbed_debug.h"
 
@@ -259,3 +261,4 @@ bd_size_t SD_F469::size() const
 {
     return (_block_size * _capacity_in_blocks);
 }
+#endif

@@ -1,5 +1,5 @@
 /* based on the library by Roy Krikke: https://os.mbed.com/users/roykrikke/code/BD_SD_DISCO_F746NG/ */
-
+#if 0
 #ifndef BD_SD_DISCO_F469NI_H
 #define BD_SD_DISCO_F469NI_H
 
@@ -118,3 +118,4 @@ private:
 };
 
 #endif /* BD_SD_DISCO_F469NI_H */
+#endif
