@@ -1,5 +1,5 @@
 /* based on the library by Roy Krikke: https://os.mbed.com/users/roykrikke/code/BD_SD_DISCO_F746NG/ */
-#if 0
+#if 1
 #ifndef BD_SD_DISCO_F469NI_H
 #define BD_SD_DISCO_F469NI_H
 
@@ -66,7 +66,7 @@ public:
      *  @param size     Size to erase in bytes, must be a multiple of erase block size
      *  @return         0 on success, negative error code on failure
      */
-    virtual int erase(bd_addr_t addr, bd_size_t size);
+    virtual int trim(bd_addr_t addr, bd_size_t size);
 
     /** Get the size of a readable block
      *

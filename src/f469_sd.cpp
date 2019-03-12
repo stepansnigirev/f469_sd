@@ -15,7 +15,7 @@
  *
  */
 
-#if 0
+#if 1
 
 #include "f469_sd.h"
 #include "mbed_debug.h"
@@ -202,7 +202,7 @@ int SD_F469::program(const void *b, bd_addr_t addr, bd_size_t size)
     return status;
 }
 
-int SD_F469::erase(bd_addr_t addr, bd_size_t size)
+int SD_F469::trim(bd_addr_t addr, bd_size_t size)
 {
     if (!is_valid_erase(addr, size)) {
         return SD_BLOCK_DEVICE_ERROR_PARAMETER;

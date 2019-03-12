@@ -291,6 +291,7 @@ uint8_t SD_Init(void)
     }
 
     return sd_state;
+
 }
 
 /**

@@ -55,7 +55,7 @@ namespace mbed
 #define CARD_UNKNOWN 4 /**< Unknown or unsupported card */
 
 #ifndef MBED_CONF_SD_TIMEOUT
-#define MBED_CONF_SD_TIMEOUT (30 * 1000) /* ms */
+#define MBED_CONF_SD_TIMEOUT (1 * 1000) /* ms */
 #endif
 
 SDIOBlockDevice::SDIOBlockDevice(PinName cardDetect) : _cardDetect(cardDetect),
