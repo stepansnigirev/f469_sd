@@ -78,7 +78,15 @@ int SD_F469::init()
 {
     lock();
     _sd_state = BSP_SD_Init();
-
+    //reinit SDIO
+	if(_sd_state != MSD_OK)
+	{
+		unlock();
+		deinit();
+		lock();
+		_sd_state = BSP_SD_Init();
+	}
+    
     if(_sd_state != MSD_OK) {
         if(_sd_state == MSD_ERROR_SD_NOT_PRESENT) {
             debug_if(SD_DBG, "SD card is missing or not connected\n");
