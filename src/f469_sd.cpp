@@ -78,14 +78,6 @@ int SD_F469::init()
 {
     lock();
     _sd_state = BSP_SD_Init();
-    //reinit SDIO
-	if(_sd_state != MSD_OK)
-	{
-		unlock();
-		deinit();
-		lock();
-		_sd_state = BSP_SD_Init();
-	}
     
     if(_sd_state != MSD_OK) {
         if(_sd_state == MSD_ERROR_SD_NOT_PRESENT) {
@@ -268,5 +260,10 @@ bd_size_t SD_F469::get_erase_size() const
 bd_size_t SD_F469::size() const
 {
     return (_block_size * _capacity_in_blocks);
+}
+
+const char * SD_F469::get_type() const{
+    static const char type[] = "SD_F469";
+    return type;
 }
 #endif

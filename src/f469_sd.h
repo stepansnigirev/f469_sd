@@ -92,6 +92,8 @@ public:
      */
     virtual bd_size_t size() const;
 
+    virtual const char * get_type() const;
+
 private:
     uint8_t _card_type;
     bd_size_t _read_size;
